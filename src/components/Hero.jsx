@@ -8,7 +8,7 @@ const Hero = () => {
         className="text-5xl md:text-6xl xl:text-7xl font-bold
       tracking-tight mb-12"
       >
-        <span className="capitalize">Bring cre ative projects to life on</span>
+        <span className="capitalize">Bring creative projects to life on</span>
         <br />
         <span className="uppercase text-green-600">liftup.</span>
       </h1>
