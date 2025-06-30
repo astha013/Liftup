@@ -1,3 +1,4 @@
+import React from 'react'
 import { FaEthereum } from 'react-icons/fa'
 import Identicon from 'react-identicons'
 import Moment from 'react-moment'

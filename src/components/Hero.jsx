@@ -1,4 +1,6 @@
+import React from 'react'
 import { setGlobalState, useGlobalState } from '../store'
+
 const Hero = () => {
   const [stats] = useGlobalState('stats')
 

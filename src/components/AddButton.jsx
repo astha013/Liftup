@@ -1,3 +1,4 @@
+import React from 'react'
 import { setGlobalState } from '../store'
 import { BsPlusLg } from 'react-icons/bs'
 

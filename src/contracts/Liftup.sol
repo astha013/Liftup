@@ -222,7 +222,7 @@ contract Liftup {
 
     function requestRefund(uint id) public returns (bool) {
         require(
-            projects[id].status != statusEnum.REVERTED ||
+            projects[id].status != statusEnum.REVERTED &&
             projects[id].status != statusEnum.DELETED,
             "Project not marked as revert or delete"
         );
