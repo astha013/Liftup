@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaEthereum } from 'react-icons/fa'
 import Identicon from 'react-identicons'
-import Moment from 'react-moment'
+import moment from 'moment'
 import { truncate } from '../store'
 
 const ProjectBackers = ({ backers }) => {
@@ -87,11 +87,8 @@ const Backer = ({ backer }) => (
     >
       {backer.refunded ? 'Yes' : 'No'}
     </td>
-    <td
-      className="text-sm font-light
-      px-6 py-4 whitespace-nowrap"
-    >
-      <Moment fromNow>{backer.timestamp}</Moment>
+    <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+      {moment(Number(backer.timestamp) * 1000).fromNow()}
     </td>
   </tr>
 )

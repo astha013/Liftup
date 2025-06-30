@@ -49,139 +49,96 @@ const CreateProject = () => {
   }
 
   return (
-    <div
-      className={`fixed top-0 left-0 w-screen h-screen flex
-    items-center justify-center bg-black bg-opacity-50
-    transform transition-transform duration-300 ${createModal}`}
-    >
-      <div
-        className="bg-white shadow-xl shadow-black
-        rounded-xl w-11/12 md:w-2/5 h-7/12 p-6"
-      >
-        <form onSubmit={handleSubmit} className="flex flex-col">
-          <div className="flex justify-between items-center">
-            <p className="font-semibold">Add Project</p>
-            <button
-              onClick={onClose}
-              type="button"
-              className="border-0 bg-transparent focus:outline-none"
-            >
-              <FaTimes />
-            </button>
-          </div>
-
-          <div className="flex justify-center items-center mt-5">
-            <div className="rounded-xl overflow-hidden h-20 w-20">
-              <img
-                src={
-                  imageURL ||
-                  'https://media.wired.com/photos/5926e64caf95806129f50fde/master/pass/AnkiHP.jpg'
-                }
-                alt="project title"
-                className="h-full w-full object-cover cursor-pointer"
-              />
-            </div>
-          </div>
-
-          <div
-            className="flex justify-between items-center
-          bg-gray-300 rounded-xl mt-5"
-          >
-            <input
-              className="block w-full bg-transparent
-            border-0 text-sm text-slate-500 focus:outline-none
-            focus:ring-0"
-              type="text"
-              name="title"
-              placeholder="Title"
-              onChange={(e) => setTitle(e.target.value)}
-              value={title}
-              required
-            />
-          </div>
-
-          <div
-            className="flex justify-between items-center
-          bg-gray-300 rounded-xl mt-5"
-          >
-            <input
-              className="block w-full bg-transparent
-            border-0 text-sm text-slate-500 focus:outline-none
-            focus:ring-0"
-              type="number"
-              step={0.01}
-              min={0.01}
-              name="cost"
-              placeholder="cost (ETH)"
-              onChange={(e) => setCost(e.target.value)}
-              value={cost}
-              required
-            />
-          </div>
-
-          <div
-            className="flex justify-between items-center
-          bg-gray-300 rounded-xl mt-5"
-          >
-            <input
-              className="block w-full bg-transparent
-            border-0 text-sm text-slate-500 focus:outline-none
-            focus:ring-0"
-              type="date"
-              name="date"
-              placeholder="Expires"
-              onChange={(e) => setDate(e.target.value)}
-              value={date}
-              required
-            />
-          </div>
-
-          <div
-            className="flex justify-between items-center
-          bg-gray-300 rounded-xl mt-5"
-          >
-            <input
-              className="block w-full bg-transparent
-            border-0 text-sm text-slate-500 focus:outline-none
-            focus:ring-0"
-              type="url"
-              name="imageURL"
-              placeholder="Image URL"
-              onChange={(e) => setImageURL(e.target.value)}
-              value={imageURL}
-              required
-            />
-          </div>
-
-          <div
-            className="flex justify-between items-center
-          bg-gray-300 rounded-xl mt-5"
-          >
-            <textarea
-              className="block w-full bg-transparent
-            border-0 text-sm text-slate-500 focus:outline-none
-            focus:ring-0"
-              type="text"
-              name="description"
-              placeholder="Description"
-              onChange={(e) => setDescription(e.target.value)}
-              value={description}
-              required
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            className="inline-block px-6 py-2.5 bg-green-600
-            text-white font-medium text-md leading-tight
-            rounded-full shadow-md hover:bg-green-700 mt-5"
-          >
-            Submit Project
-          </button>
-        </form>
+   <div
+  className={`fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/60 backdrop-blur-sm z-50 transition-transform duration-300 ${createModal}`}
+>
+  <div className="bg-white rounded-2xl w-[92%] max-w-md sm:w-[80%] md:w-[50%] lg:w-[40%] xl:w-[35%] p-6 shadow-2xl border border-gray-200">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      <div className="flex justify-between items-center mb-4">
+        <p className="text-lg font-bold text-gray-800">Add Project</p>
+        <button
+          onClick={onClose}
+          type="button"
+          className="text-gray-500 hover:text-red-600 transition"
+        >
+          <FaTimes size={18} />
+        </button>
       </div>
-    </div>
-  )
-}
+
+      <div className="w-full flex justify-center">
+        <div className="rounded-xl overflow-hidden h-32 w-32 shadow">
+          <img
+            src={
+              imageURL ||
+              'https://media.wired.com/photos/5926e64caf95806129f50fde/master/pass/AnkiHP.jpg'
+            }
+            alt="project"
+            className="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+
+      <input
+        className="w-full px-4 py-2 rounded-xl bg-gray-100 text-gray-700 text-sm focus:ring-2 focus:ring-green-500 focus:outline-none"
+        type="text"
+        name="title"
+        placeholder="Title"
+        onChange={(e) => setTitle(e.target.value)}
+        value={title}
+        required
+      />
+
+      <input
+        className="w-full px-4 py-2 rounded-xl bg-gray-100 text-gray-700 text-sm focus:ring-2 focus:ring-green-500 focus:outline-none"
+        type="number"
+        step={0.01}
+        min={0.01}
+        name="cost"
+        placeholder="Cost (ETH)"
+        onChange={(e) => setCost(e.target.value)}
+        value={cost}
+        required
+      />
+
+      <input
+        className="w-full px-4 py-2 rounded-xl bg-gray-100 text-gray-700 text-sm focus:ring-2 focus:ring-green-500 focus:outline-none"
+        type="date"
+        name="date"
+        placeholder="Expires"
+        onChange={(e) => setDate(e.target.value)}
+        value={date}
+        required
+      />
+
+      <input
+        className="w-full px-4 py-2 rounded-xl bg-gray-100 text-gray-700 text-sm focus:ring-2 focus:ring-green-500 focus:outline-none"
+        type="url"
+        name="imageURL"
+        placeholder="Image URL"
+        onChange={(e) => setImageURL(e.target.value)}
+        value={imageURL}
+        required
+      />
+
+      <textarea
+        className="w-full px-4 py-2 rounded-xl bg-gray-100 text-gray-700 text-sm focus:ring-2 focus:ring-green-500 focus:outline-none resize-none h-24"
+        name="description"
+        placeholder="Description"
+        onChange={(e) => setDescription(e.target.value)}
+        value={description}
+        required
+      ></textarea>
+
+      <button
+        type="submit"
+        className="w-full py-2.5 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition shadow-md"
+      >
+        Submit Project
+      </button>
+    </form>
+  </div>
+</div>
+
+) }
 
 export default CreateProject

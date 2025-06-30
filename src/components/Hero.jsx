@@ -12,7 +12,7 @@ const Hero = () => {
       >
         <span className="capitalize">Bring creative projects to life on</span>
         <br />
-        <span className="uppercase text-green-600">liftup.</span>
+        <span className="uppercase text-green-600 py-4">liftup.</span>
       </h1>
       <div className="flex justify-center items-center space-x-2">
         <button
@@ -36,7 +36,9 @@ const Hero = () => {
         </button>
       </div>
 
-      <div className="flex justify-center items-center mt-10">
+      <div className="flex justify-center items-center mt-10 shadow-md rounded-lg
+      bg-gray-100 p-6 space-x-4 w-full max-w-10xl
+      md:space-x-6 lg:space-x-8">
         <div
           className="flex flex-col justify-center items-center
           h-20 border shadow-md w-full"
