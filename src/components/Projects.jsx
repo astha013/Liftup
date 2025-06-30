@@ -13,8 +13,10 @@ const Projects = ({ projects }) => {
   const getCollection = () => projects.slice(0, end)
 
   useEffect(() => {
-    setCollection(getCollection())
-  }, [projects, end])
+  const slicedProjects = projects.slice(0, end)
+  setCollection(slicedProjects)
+}, [projects, end])
+
 
   return (
     <div className="flex flex-col px-6 mb-7">
