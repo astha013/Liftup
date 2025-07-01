@@ -6,7 +6,7 @@ import DeleteProject from '../components/DeleteProject'
 import ProjectBackers from '../components/ProjectBackers'
 import ProjectDetails from '../components/ProjectDetails'
 import UpdateProject from '../components/UpdateProject'
-import { getBackers, loadProject } from '../services/blockchain'
+import { getBackers, loadProject, loadProjects} from '../services/blockchain'
 import { useGlobalState } from '../store'
 
 const Project = () => {
@@ -18,6 +18,7 @@ const Project = () => {
   useEffect(async () => {
     await loadProject(id)
     await getBackers(id)
+    await loadProjects()
     setLoaded(true)
   }, [])
   return loaded ? (

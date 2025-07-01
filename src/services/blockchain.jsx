@@ -120,6 +120,7 @@ const loadProjects = async () => {
   } catch (error) {
     reportError(error)
   }
+  console.log('Projects loaded successfully')
 }
 
 const loadProject = async (id) => {
@@ -133,6 +134,8 @@ const loadProject = async (id) => {
     alert(JSON.stringify(error.message))
     reportError(error)
   }
+
+  console.log('Project loaded successfully')
 }
 
 const backProject = async (id, amount) => {
