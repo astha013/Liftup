@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { isWallectConnected } from './Liftup'
+import { isWalletConnected } from './Liftup'
 import { Route, Routes } from 'react-router-dom'
 import { useGlobalState } from './store'
 import { checkAuthState } from './CometChat'
@@ -10,18 +10,29 @@ import CreateProject from './components/CreateProject'
 import Home from './views/Home'
 import Project from './views/Project'
 import Chat from './views/Chat'
+import { ToastContainer } from 'react-toastify'
 
 const App = () => {
   const [loaded, setLoaded] = useState(false)
   const [connectedAccount] = useGlobalState('connectedAccount')
 
   useEffect(() => {
-    checkAuthState()
-    isWallectConnected().then(() => {
-      console.log('Blockchain Loaded')
-      setLoaded(true)
-    })
-  }, [])
+  const init = async () => {
+    try {
+      await checkAuthState();          // ✅ assume async
+      await isWalletConnected();       // ✅ fix typo & assume async
+      console.log("Blockchain Loaded");
+      setLoaded(true);
+    } catch (error) {
+      console.error("Failed to init blockchain:", error);
+    }
+  };
+
+  init();
+
+  return () => {}; // ✅ returns a valid cleanup function (empty here)
+}, []);
+
 
   return (
     <div className="min-h-screen relative">
@@ -34,7 +45,21 @@ const App = () => {
           <Route path="/projects/:id" element={<Project />} />
           <Route path="/chats/:id" element={<Chat />} />
         </Routes>
+
       ) : null}
+
+      <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
 
       {connectedAccount ? (
         <>

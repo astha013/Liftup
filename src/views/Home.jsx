@@ -9,10 +9,20 @@ import { useGlobalState } from '../store'
 
 const Home = () => {
   const [projects] = useGlobalState('projects')
+  
+useEffect(() => {
+  const fetchProjects = async () => {
+    try {
+      await loadProjects();
+    } catch (err) {
+      console.error("Failed to load projects:", err);
+    }
+  };
 
-  // useEffect(async () => {
-  //   await loadProjects()
-  // }, [])
+  fetchProjects();
+}, []);
+
+
   return (
     <>
       <Hero />

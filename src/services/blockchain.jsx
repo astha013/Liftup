@@ -117,6 +117,9 @@ const loadProjects = async () => {
 
     setGlobalState('stats', structureStats(stats))
     setGlobalState('projects', structuredProjects(projects))
+
+    // console.log('Projects loaded:', structuredProjects(projects))
+    // console.log('Stats loaded:', structureStats(stats))
   } catch (error) {
     reportError(error)
   }
@@ -230,8 +233,8 @@ const structureStats = (stats) => ({
 })
 
 const reportError = (error) => {
-  console.log(error.message)
-  throw new Error('No ethereum object.')
+  console.error("Detailed Error:", error)
+  throw error
 }
 
 export {

@@ -30,9 +30,12 @@ const CreateProject = () => {
       imageURL,
     }
 
+    console.log('Creating project with params:', params)
+
     await createProject(params)
     toast.success('Project created successfully, will reflect in 30sec.')
     onClose()
+  
   }
 
   const onClose = () => {

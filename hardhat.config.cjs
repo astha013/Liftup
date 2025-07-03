@@ -4,8 +4,9 @@ require('dotenv').config();
 module.exports = {
   defaultNetwork: 'localhost',
   networks: {
-    localhost: {
-      url: 'http://127.0.0.1:8545', // Ganache/Hardhat node
+    sepolia: {
+      url: process.env.SEPOLIA_RPC_URL,
+      accounts: [process.env.PRIVATE_KEY],
     },
   },
   solidity: {
