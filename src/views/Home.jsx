@@ -1,9 +1,9 @@
 import React from 'react'
 import { useEffect } from 'react'
-import AddButton from '../components/AddButton'
-import CreateProject from '../components/CreateProject'
-import Hero from '../components/Hero'
-import Projects from '../components/Projects'
+import AddButton from '../components/common/AddButton'
+import CreateProject from '../components/modals/CreateProject'
+import Hero from '../components/common/Hero'
+import Projects from '../components/projects/Projects'
 import { loadProjects } from '../services/blockchain'
 import { useGlobalState } from '../store'
 

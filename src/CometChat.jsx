@@ -68,6 +68,11 @@ const createNewGroup = async (GUID, groupName) => {
 }
 
 const getGroup = async (GUID) => {
+  if (!GUID) {
+    console.error('Invalid GUID provided to getGroup')
+    return
+  }
+
   await CometChat.getGroup(GUID)
     .then((group) => setGlobalState('group', group))
     .catch((error) => console.log(error))

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { getMessages, sendMessage, CometChat } from '../CometChat'
-import { truncate, useGlobalState } from '../store'
+import { getMessages, sendMessage, CometChat } from '../../CometChat'
+import { truncate, useGlobalState } from '../../store'
 
 const Messages = ({ gid }) => {
   const [message, setMessage] = useState('')

@@ -1,7 +1,7 @@
 import Identicon from 'react-identicons'
 import { useNavigate, useParams } from 'react-router-dom'
 import { truncate, useGlobalState } from '../store'
-import Messages from '../components/Messages'
+import Messages from '../components/chat/Messages'
 
 const Chat = () => {
   const { id } = useParams()
