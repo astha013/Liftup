@@ -7,6 +7,7 @@ const { setGlobalState, useGlobalState, getGlobalState } = createGlobalState({
   deleteModal: 'scale-0',
   backModal: 'scale-0',
   chatModal: 'scale-0',
+  chatAuthModal: false,
   connectedAccount: '',
   projects: [],
   project: null,

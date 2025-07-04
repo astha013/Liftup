@@ -47,7 +47,7 @@ const ChatAuth = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black/60 backdrop-blur-sm z-50 transition-transform duration-300 ${chatAuthModal}`}
+      className={`fixed inset-0 flex items-center justify-center bg-black/60 backdrop-blur-sm z-50 transform transition-transform duration-300 ${chatAuthModal}`}
     >
       <div className="bg-white rounded-2xl shadow-2xl w-11/12 max-w-md overflow-hidden border border-gray-200">
         {/* Header */}

@@ -10,6 +10,7 @@ import CreateProject from './components/modals/CreateProject'
 import Home from './views/Home'
 import Project from './views/Project'
 import Chat from './views/Chat'
+import ChatModal from './components/modals/ChatModal'
 import { ToastContainer } from 'react-toastify'
 
 const App = () => {
@@ -44,6 +45,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/projects/:id" element={<Project />} />
           <Route path="/chats/:id" element={<Chat />} />
+          
         </Routes>
 
       ) : null}
@@ -67,6 +69,7 @@ const App = () => {
           <CreateProject />
         </>
       ) : null}
+      <ChatModal />
     </div>
   )
 }

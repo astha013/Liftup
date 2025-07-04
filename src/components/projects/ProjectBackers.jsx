@@ -7,7 +7,7 @@ import { truncate } from '../../store'
 
 const ProjectBackers = ({ backers }) => {
   return (
-    <div className="flex flex-col justify-center items-start md:w-2/3 px-6 mx-auto">
+    <div className="flex flex-col justify-center items-start md:px-6 mx-auto">
       <div className="w-full mb-10">
         <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
           <FaUser className="mr-3 text-green-600" />
