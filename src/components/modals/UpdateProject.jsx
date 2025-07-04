@@ -7,10 +7,14 @@ import { useGlobalState, setGlobalState } from '../../store'
 
 const UpdateProject = ({ project }) => {
   const [updateModal] = useGlobalState('updateModal')
+  const [connectedAccount] = useGlobalState('connectedAccount')
   const [title, setTitle] = useState(project?.title || '')
   const [description, setDescription] = useState(project?.description || '')
   const [date, setDate] = useState(project?.date || '')
   const [imageURL, setImageURL] = useState(project?.imageURL || '')
+
+  // Check if current user is the project owner
+  const isOwner = connectedAccount?.toLowerCase() === project?.owner?.toLowerCase()
 
   const toTimestamp = (dateStr) => {
     const dateObj = Date.parse(dateStr)
@@ -19,6 +23,12 @@ const UpdateProject = ({ project }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    
+    if (!isOwner) {
+      toast.error('Only project owner can update this project')
+      return
+    }
+
     if (!title || !description || !date || !imageURL) return
 
     const params = {
@@ -36,6 +46,11 @@ const UpdateProject = ({ project }) => {
 
   const onClose = () => {
     setGlobalState('updateModal', 'scale-0')
+  }
+
+  // If user is not the owner, don't render the modal
+  if (!isOwner) {
+    return null
   }
 
   return (

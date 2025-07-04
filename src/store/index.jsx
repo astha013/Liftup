@@ -12,6 +12,7 @@ const { setGlobalState, useGlobalState, getGlobalState } = createGlobalState({
   projects: [],
   project: null,
   stats: null,
+  currentUser: null,
   backers: [],
 
   backProject: null,            

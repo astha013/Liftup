@@ -7,13 +7,27 @@ import { useGlobalState, setGlobalState } from '../../store'
 
 const DeleteProject = ({ project }) => {
   const [deleteModal] = useGlobalState('deleteModal')
+  const [connectedAccount] = useGlobalState('connectedAccount')
   const navigate = useNavigate()
 
+  // Check if current user is the project owner
+  const isOwner = connectedAccount?.toLowerCase() === project?.owner?.toLowerCase()
+
   const handleSubmit = async () => {
+    if (!isOwner) {
+      toast.error('Only project owner can delete this project')
+      return
+    }
+
     await deleteProject(project?.id)
     toast.success('Project deleted successfully, will reflect in 30sec.')
     setGlobalState('deleteModal', 'scale-0')
     navigate('/')
+  }
+
+  // If user is not the owner, don't render the modal
+  if (!isOwner) {
+    return null
   }
 
   return (
