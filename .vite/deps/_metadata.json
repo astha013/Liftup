@@ -1,0 +1,118 @@
+{
+  "hash": "4196132c",
+  "configHash": "46c7ef1b",
+  "lockfileHash": "dd72ce34",
+  "browserHash": "2b3b662f",
+  "optimized": {
+    "@cometchat-pro/chat": {
+      "src": "../../node_modules/@cometchat-pro/chat/CometChat.js",
+      "file": "@cometchat-pro_chat.js",
+      "fileHash": "ae8b23b8",
+      "needsInterop": true
+    },
+    "buffer": {
+      "src": "../../node_modules/buffer/index.js",
+      "file": "buffer.js",
+      "fileHash": "91615ac2",
+      "needsInterop": true
+    },
+    "ethers": {
+      "src": "../../node_modules/ethers/lib.esm/index.js",
+      "file": "ethers.js",
+      "fileHash": "d2cf3dec",
+      "needsInterop": false
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "41534b9f",
+      "needsInterop": false
+    },
+    "lucide-react": {
+      "src": "../../node_modules/lucide-react/dist/esm/lucide-react.js",
+      "file": "lucide-react.js",
+      "fileHash": "1b7fa8b7",
+      "needsInterop": false
+    },
+    "moment": {
+      "src": "../../node_modules/moment/dist/moment.js",
+      "file": "moment.js",
+      "fileHash": "9763ec0b",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "57557ee3",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "49df1a01",
+      "needsInterop": true
+    },
+    "react-hooks-global-state": {
+      "src": "../../node_modules/react-hooks-global-state/dist/index.modern.js",
+      "file": "react-hooks-global-state.js",
+      "fileHash": "70cc9735",
+      "needsInterop": false
+    },
+    "react-icons/bi": {
+      "src": "../../node_modules/react-icons/bi/index.mjs",
+      "file": "react-icons_bi.js",
+      "fileHash": "f0bd424f",
+      "needsInterop": false
+    },
+    "react-icons/bs": {
+      "src": "../../node_modules/react-icons/bs/index.mjs",
+      "file": "react-icons_bs.js",
+      "fileHash": "7292fd4c",
+      "needsInterop": false
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.mjs",
+      "file": "react-icons_fa.js",
+      "fileHash": "fdf4bba9",
+      "needsInterop": false
+    },
+    "react-icons/tb": {
+      "src": "../../node_modules/react-icons/tb/index.mjs",
+      "file": "react-icons_tb.js",
+      "fileHash": "a12b6d6f",
+      "needsInterop": false
+    },
+    "react-identicons": {
+      "src": "../../node_modules/react-identicons/build/index.js",
+      "file": "react-identicons.js",
+      "fileHash": "53b9bc30",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "7b06dc38",
+      "needsInterop": false
+    },
+    "react-toastify": {
+      "src": "../../node_modules/react-toastify/dist/index.mjs",
+      "file": "react-toastify.js",
+      "fileHash": "84768ea4",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-MQL6QFDH": {
+      "file": "chunk-MQL6QFDH.js"
+    },
+    "chunk-6GSVJYH6": {
+      "file": "chunk-6GSVJYH6.js"
+    },
+    "chunk-ZCTWYGUT": {
+      "file": "chunk-ZCTWYGUT.js"
+    },
+    "chunk-PR4QN5HX": {
+      "file": "chunk-PR4QN5HX.js"
+    }
+  }
+}
