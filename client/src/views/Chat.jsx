@@ -1,5 +1,5 @@
 import React from 'react'
-import Identicon from 'react-identicons'
+import Jdenticon from 'react-jdenticons'
 import { useNavigate, useParams } from 'react-router-dom'
 import { truncate, useGlobalState } from '../store'
 import Messages from '../components/chat/Messages'
@@ -22,7 +22,7 @@ const Chat = () => {
             {/* User Info Section */}
             <div className="flex items-center space-x-4">
               <div className="relative">
-                <Identicon
+                <Jdenticon
                   className="rounded-full shadow-md ring-2 ring-blue-100"
                   string={connectedAccount}
                   size={40}

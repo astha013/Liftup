@@ -1,5 +1,5 @@
 import React from 'react'
-import Identicon from 'react-identicons'
+import Jdenticon from 'react-jdenticons'
 import { Link } from 'react-router-dom'
 import { FaEthereum, FaUsers, FaClock } from 'react-icons/fa'
 import { daysRemaining, truncate } from '../../store'
@@ -76,7 +76,7 @@ const ProjectCard = ({ project }) => {
           {/* Creator Info */}
           <div className="flex items-center space-x-3 mb-4">
             <div className="relative">
-              <Identicon
+              <Jdenticon
                 className="rounded-full ring-2 ring-gray-100 group-hover:ring-green-200 transition-all duration-200"
                 string={project.owner}
                 size={32}

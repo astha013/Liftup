@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaEthereum, FaUser, FaClock, FaCheckCircle, FaTimesCircle } from 'react-icons/fa'
-import Identicon from 'react-identicons'
+import Jdenticon from 'react-jdenticons'
 import moment from 'moment'
 import { truncate } from '../../store'
 
@@ -63,7 +63,7 @@ const Backer = ({ backer, index }) => (
       {/* Backer Info */}
       <div className="flex items-center space-x-3">
         <div className="relative">
-          <Identicon
+          <Jdenticon
             className="h-12 w-12 rounded-full shadow-md border-2 border-gray-200 group-hover:border-green-400 transition-colors duration-200"
             string={backer.owner}
             size={48}

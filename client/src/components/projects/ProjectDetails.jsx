@@ -1,5 +1,5 @@
 import React from 'react'
-import Identicons from 'react-identicons'
+import Jdenticons from 'react-jdenticons'
 import { FaEthereum, FaUsers, FaClock, FaShare, FaHeart, FaCalendarAlt, FaChartLine } from 'react-icons/fa'
 import { BiChat } from 'react-icons/bi'
 import { daysRemaining, setGlobalState, truncate, useGlobalState } from '../../store'
@@ -82,7 +82,7 @@ const ProjectDetails = ({ project }) => {
             {/* Creator Info */}
             <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
               <div className="flex items-center space-x-4">
-                <Identicons
+                <Jdenticons
                   string={project?.owner}
                   size={60}
                   className="rounded-full ring-4 ring-blue-50"
