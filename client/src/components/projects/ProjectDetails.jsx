@@ -82,7 +82,7 @@ const ProjectDetails = ({ project }) => {
             {/* Creator Info */}
             <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
               <div className="flex items-center space-x-4">
-                <Jdenticons
+                <Jdenticon
                   string={project?.owner}
                   size={60}
                   className="rounded-full ring-4 ring-blue-50"
