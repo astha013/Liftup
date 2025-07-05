@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaEthereum, FaUser, FaClock, FaCheckCircle, FaTimesCircle } from 'react-icons/fa'
-import Jdenticon from 'react-jdenticons'
+import Jdenticon from 'react-jdenticon'
 import moment from 'moment'
 import { truncate } from '../../store'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Jdenticon from 'react-jdenticons'
+import Jdenticon from 'react-jdenticon'
 import { useNavigate, useParams } from 'react-router-dom'
 import { truncate, useGlobalState } from '../store'
 import Messages from '../components/chat/Messages'

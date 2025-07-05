@@ -1,5 +1,5 @@
 import React from 'react'
-import Jdenticons from 'react-jdenticons'
+import Jdenticon from 'react-jdenticon'
 import { FaEthereum, FaUsers, FaClock, FaShare, FaHeart, FaCalendarAlt, FaChartLine } from 'react-icons/fa'
 import { BiChat } from 'react-icons/bi'
 import { daysRemaining, setGlobalState, truncate, useGlobalState } from '../../store'

@@ -1,5 +1,5 @@
 import React from 'react'
-import Jdenticon from 'react-jdenticons'
+import Jdenticon from 'react-jdenticon'
 import { Link } from 'react-router-dom'
 import { FaEthereum, FaUsers, FaClock } from 'react-icons/fa'
 import { daysRemaining, truncate } from '../../store'
