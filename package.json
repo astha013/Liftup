@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test-docker": "npx hardhat test"
+
   },
   "dependencies": {
     "@cometchat-pro/chat": "^3.0.13",

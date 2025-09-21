@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: liftup-frontend:latest
+    ports:
+      - "3001:80"          # open http://localhost:3000 to see frontend
+    env_file:
+      - .env               # optional for VITE_* variables if you use them
+    restart: unless-stopped
+
+  hardhat:
+    build:
+      context: ./
+      dockerfile: Dockerfile.hardhat
+    image: liftup-hardhat:latest
+    working_dir: /app
+    # For local development you may want the container to have a bind-mount to code:
+    volumes:
+      - ./:/app
+    environment:
+      - SEPOLIA_RPC_URL=${SEPOLIA_RPC_URL}
+      - PRIVATE_KEY=${PRIVATE_KEY}
+    entrypoint: ["tail", "-f", "/dev/null"]  # keep container running so you can exec into it
+    # You won't normally expose ports unless you run `npx hardhat node` (8545)
