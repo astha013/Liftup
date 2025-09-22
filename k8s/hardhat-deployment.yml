@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hardhat-deployment
+  labels:
+    app: hardhat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hardhat
+  template:
+    metadata:
+      labels:
+        app: hardhat
+    spec:
+      containers:
+        - name: hardhat
+          image: liftup-hardhat:latest
+          imagePullPolicy: Never   # Minikube local build
+          ports:
+            - containerPort: 8545
+          env:
+            - name: INFURA_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: liftup-secrets
+                  key: INFURA_API_KEY
+            - name: PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: liftup-secrets
+                  key: PRIVATE_KEY
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hardhat-service
+spec:
+  type: NodePort
+  selector:
+    app: hardhat
+  ports:
+    - protocol: TCP
+      port: 8545
+      targetPort: 8545
+      nodePort: 30545   
