@@ -18,8 +18,8 @@ jobs:
 
       - name: Build Docker images
         run: |
-          docker build -t liftup-frontend:latest ./client
-          docker build -t liftup-hardhat:latest ./contracts
+          docker build -t liftup-frontend:latest -f client/Dockerfile ./client
+          docker build -t liftup-hardhat:latest -f Dockerfile.hardhat .
 
       - name: Save images as artifact
         run: |
