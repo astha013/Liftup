@@ -6,9 +6,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
-    "test-docker": "npx hardhat test"
+    "test-docker": "npx hardhat test",
+    "client:dev": "cd client && npm run dev",
+    "client:build": "cd client && npm run build",
+    "client:start": "cd client && npm run preview",
+    "contracts:test": "npx hardhat test",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "ci": "npm run lint && npm run client:build && npm run contracts:test"
+}
+
 
   },
   "dependencies": {
