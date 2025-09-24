@@ -14,10 +14,8 @@
     "contracts:test": "npx hardhat test",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "ci": "npm run lint && npm run client:build && npm run contracts:test"
-}
+},
 
-
-  },
   "dependencies": {
     "@cometchat-pro/chat": "^3.0.13",
     "@tailwindcss/vite": "^4.1.7",
