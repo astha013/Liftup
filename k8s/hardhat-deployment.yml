@@ -16,22 +16,23 @@ spec:
     spec:
       containers:
         - name: hardhat
-          image: liftup-hardhat:latest
-          imagePullPolicy: Never   # Minikube local build
+          image: astha013/liftup-hardhat:latest
+          imagePullPolicy: Always  # Minikube local build
           ports:
             - containerPort: 8545
           env:
-            - name: INFURA_API_KEY
+            - name: SEPOLIA_RPC_URL
               valueFrom:
                 secretKeyRef:
                   name: liftup-secrets
-                  key: INFURA_API_KEY
+                  key: SEPOLIA_RPC_URL
             - name: PRIVATE_KEY
               valueFrom:
                 secretKeyRef:
                   name: liftup-secrets
                   key: PRIVATE_KEY
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
